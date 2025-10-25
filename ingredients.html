@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ingredients - LUMORA.skin</title>
+  <!-- Playfair Display font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Playfair Display', serif;
+      color: #f8f5f1;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    /* Background image with overlay for readability */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('top-view-arrangement-with-spa-items-wooden-background.jpg'); /* Replace with your preferred image */
+      background-size: cover;
+      background-position: center;
+      z-index: -2;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(43, 43, 43, 0.6);
+      z-index: -1;
+    }
+     nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    position: relative;
+    z-index: 2;
+    backdrop-filter: blur(10px); /* adds a frosted glass effect */
+    background: rgba(43, 43, 43, 0.3); /* semi-transparent background for nav */
+    border-radius: 10px;
+    margin: 20px;
+  }
+
+    /* Navigation Bar styling */
+    nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 25px;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 1.8em;
+  font-weight: 700;
+  color: #6a7a67;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #6a7a67;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ffd3b6;
+}
+
+.search-icon {
+  font-size: 22px;
+  color: #6a7a67;
+  cursor: pointer;
+}
+    /* Main container */
+    .container {
+      padding: 50px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Main header style */
+    h1 {
+      font-size: 3em;
+      text-align: center;
+      margin-bottom: 40px;
+      color: #ffd3b6;
+    }
+
+    /* Ingredients grid styling */
+    .ingredients-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    /* Ingredient card styling */
+    .ingredient-card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .ingredient-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.4);
+    }
+
+    .ingredient-image {
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      object-fit: cover;
+    }
+
+    .ingredient-name {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      font-weight: 700;
+      color: #f8f5f1;
+      text-align: center;
+    }
+
+    .ingredient-description {
+      font-size: 1em;
+      line-height: 1.5;
+      color: #f8f5f1;
+      text-align: center;
+    }
+
+    /* Responsive adjustments */
+    @media(max-width: 768px) {
+      h1 {
+        font-size: 2em;
+        margin-bottom: 30px;
+      }
+      .nav-links {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav>
+  <div class="index.html">LUMORA.skin</div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="search.html" class="search-icon" title="Search" style="font-size:1.5em;">&#128269;</a>
+</nav>
+
+<!-- Main Content -->
+<div class="container">
+  <h1>Ingredients</h1>
+  <div class="ingredients-grid">
+    <!-- Existing Ingredients -->
+    <div class="ingredient-card">
+      <img src="shutterstock_1049109326.jpeg" alt="Aloe Vera" class="ingredient-image" />
+      <div class="ingredient-name">Aloe Vera</div>
+      <div class="ingredient-description">
+        Known for its soothing and healing properties, perfect for skincare.
+      </div>
+    </div>
+    <div class="ingredient-card">
+      <img src="mtkwntgxmdy0ntk0nji5nzu3-399587.jpeg" alt="Vitamin C" class="ingredient-image" />
+      <div class="ingredient-name">Vitamin C</div>
+      <div class="ingredient-description">
+        An antioxidant that brightens skin and promotes collagen production.
+      </div>
+    </div>
+    <div class="ingredient-card">
+      <img src="IMG-4591-scaled.jpeg" alt="Hyaluronic Acid" class="ingredient-image" />
+      <div class="ingredient-name">Hyaluronic Acid</div>
+      <div class="ingredient-description">
+        Provides deep hydration and plumps the skin.
+      </div>
+    </div>
+    <!-- New Natural Ingredients -->
+    <div class="ingredient-card">
+      <img src="Interesting-Benefits-of-Green-Tea-Oil-for-Skin-Hair-Health_396758272.jpeg" alt="Tea Tree Oil" class="ingredient-image" />
+      <div class="ingredient-name">Tea Tree Oil</div>
+      <div class="ingredient-description">
+        Known for its antimicrobial properties, helps combat acne and blemishes.
+      </div>
+    </div>
+    <div class="ingredient-card">
+      <img src="shutterstock_723256546.jpeg" alt="Jojoba Oil" class="ingredient-image" />
+      <div class="ingredient-name">Jojoba Oil</div>
+      <div class="ingredient-description">
+        Mimics natural skin oils, providing hydration and balancing oil production.
+      </div>
+    </div>
+    <div class="ingredient-card">
+      <img src="how-to-do-rose-water-facial-at-home-step-by-step-guide.jpeg" alt="Rose Water" class="ingredient-image" />
+      <div class="ingredient-name">Rose Water</div>
+      <div class="ingredient-description">
+        Soothes skin, reduces redness, and acts as a gentle toner.
+      </div>
+    </div>
+    <div class="ingredient-card">
+      <img src="AdobeStock_119581666.jpeg" alt="Green Tea Extract" class="ingredient-image" />
+      <div class="ingredient-name">Green Tea Extract</div>
+      <div class="ingredient-description">
+        Rich in antioxidants, helps protect skin from environmental damage.
+      </div>
+    </div>
+    <div class="ingredient-card">
+      <img src="2048x1365-Fleeting-Beauties-LI2098987-89ae5a6.jpeg" alt="Witch Hazel" class="ingredient-image" />
+      <div class="ingredient-name">Witch Hazel</div>
+      <div class="ingredient-description">
+        Natural astringent that tightens skin and reduces inflammation.
+      </div>
+    </div>
+    <div class="ingredient-card">
+      <img src="shutterstock_263002952.jpeg" alt="Manuka Honey" class="ingredient-image" />
+      <div class="ingredient-name">Manuka Honey</div>
+      <div class="ingredient-description">
+        Antibacterial and healing, ideal for acne-prone skin.
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

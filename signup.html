@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sign Up - LUMORA.skin</title>
+<!-- Google Font for Playfair Display -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="signup.css">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav>
+  <div class="index.html">LUMORA.skin</div>
+  <ul class="nav-links">
+     <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <a href="search.html" class="search-icon" title="Search">&#128269;</a>
+</nav>
+
+<!-- Signup Form -->
+<div class="signup-container">
+  <form class="signup-form" action="submit_signup.html" method="POST">
+    <h2>Create an Account</h2>
+    <div class="form-group">
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" placeholder="Your full name" required />
+    </div>
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required />
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Password" required />
+    </div>
+    <div class="form-group">
+      <label for="confirm-password">Confirm Password</label>
+      <input type="password" id="confirm-password" name="confirm_password" placeholder="Confirm Password" required />
+    </div>
+    <button type="submit" class="signup-btn">Sign Up</button>
+  </form>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-spacer"></div>
+  <div class="social-icons">
+    <a href="#" aria-label="Instagram">
+      <img src="insta.png" alt="Instagram" />
+    </a>
+    <a href="#" aria-label="Facebook">
+      <img src="fb.png" alt="Facebook" />
+    </a>
+    <a href="#" aria-label="Twitter">
+      <img src="twit.png" alt="Twitter" />
+    </a>
+  </div>
+</footer>
+
+</body>
+</html>
