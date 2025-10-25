@@ -1,0 +1,153 @@
+
+    /* Reset styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Playfair Display', serif;
+      color: #f8f5f1;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    /* Background image with overlay for readability */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('person-doing-selfcare-beauty-treatments.jpg'); /* Replace with your preferred image */
+      background-size: cover;
+      background-position: center;
+      z-index: -2;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(43, 43, 43, 0.6); /* Overlay for readability */
+      z-index: -1;
+    }
+
+    /* Navigation Styling */
+     nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    position: relative;
+    z-index: 2;
+    backdrop-filter: blur(10px); /* adds a frosted glass effect */
+    background: rgba(43, 43, 43, 0.3); /* semi-transparent background for nav */
+    border-radius: 10px;
+    margin: 20px;
+  }
+    nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 25px;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 1.8em;
+  font-weight: 700;
+  color: #6a7a67;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #6a7a67;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ffd3b6;
+}
+
+.search-icon {
+  font-size: 22px;
+  color: #6a7a67;
+  cursor: pointer;
+}
+
+    /* Main content container */
+    .container {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Main section styling */
+    main {
+      background: rgba(43, 43, 43, 0.7); /* semi-transparent background for contrast */
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+
+    h1 {
+      font-size: 3em;
+      text-align: center;
+      margin-bottom: 30px;
+      color: #ffd3b6;
+    }
+
+    /* FAQ questions styling */
+    .service-section {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .question {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 15px;
+      transition: background 0.3s ease;
+    }
+
+    .question:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .question h2 {
+      margin-bottom: 10px;
+      font-size: 1.8em;
+      color: #f8f5f1;
+    }
+
+    .answer {
+      font-size: 1.1em;
+      line-height: 1.5;
+      color: #f8f5f1;
+    }
+
+    /* Responsive */
+    @media(max-width: 768px) {
+      main {
+        padding: 30px 20px;
+      }
+      h1 {
+        font-size: 2.2em;
+      }
+    }

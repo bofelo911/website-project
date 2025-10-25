@@ -1,0 +1,129 @@
+
+  /* Reset styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Body styles */
+  body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #f0f4f3, #e0e7e2);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Navigation bar styles (reuse previous) */
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Georgia', serif;
+    color: #333;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+  }
+
+  li {
+    font-size: 16px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #4A5A6A;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+
+  a:hover {
+    color: #8A9A5B;
+  }
+
+  .search-icon {
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+  }
+
+  /* Main content styles */
+  .main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+  }
+
+  /* Search form styles */
+  .search-form {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  input[type="text"] {
+    flex: 1;
+    padding: 15px 20px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px 0 0 8px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+
+  input[type="text"]:focus {
+    border-color: #8A9A5B;
+  }
+
+  button {
+    padding: 15px 20px;
+    background-color: #8A9A5B;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  button:hover {
+    background-color: #6b7a3d;
+  }
+
+  /* Responsive adjustments */
+  @media(max-width: 768px) {
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+    ul {
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 10px;
+    }
+    .search-form {
+      flex-direction: column;
+    }
+    input[type="text"] {
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    button {
+      border-radius: 8px;
+    }
+  }

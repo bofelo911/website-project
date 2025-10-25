@@ -1,0 +1,239 @@
+
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global */
+body {
+  font-family: 'Playfair Display', serif;
+  background-color: #f8f5f1;
+  color: #7b8b76;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ----------------------------
+   HERO WRAPPER (banner covers nav + hero)
+----------------------------- */
+.hero-wrapper {
+  background: url('spa-arrangement-with-cremes.jpg') center/cover no-repeat;
+  padding-bottom: 60px;
+  position: relative;
+  color: #eab1a5;
+}
+
+/* Overlay for readability */
+.hero-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.35); /* soft light overlay */
+  backdrop-filter: blur(3px);
+  z-index: 1;
+}
+
+/* Pull content above overlay */
+.hero-wrapper * {
+  position: relative;
+  z-index: 2;
+}
+
+/* NAVIGATION */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 25px;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 1.8em;
+  font-weight: 700;
+  color: #6a7a67;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #6a7a67;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ffd3b6;
+}
+
+.search-icon {
+  font-size: 22px;
+  color: #6a7a67;
+  cursor: pointer;
+}
+
+/* HERO SECTION */
+.hero {
+  text-align: center;
+  padding: 80px 20px 60px;
+}
+
+.hero h1 {
+  font-size: 2.8em;
+  margin-bottom: 25px;
+  line-height: 1.3;
+  color: #6a7a67;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+button {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: 'Playfair Display', serif;
+}
+
+.shop-btn {
+  background-color: #7b8b76;
+  color: white;
+}
+
+.shop-btn:hover {
+  background-color: #6a7a67;
+}
+
+.signup-btn {
+  background-color: #f7a46d;
+  color: white;
+}
+
+.signup-btn:hover {
+  background-color: #e48c50;
+}
+
+/* ----------------------------
+   FEATURES
+----------------------------- */
+.features {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1100px;
+  margin: 60px auto;
+  gap: 80px;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feature p {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  color: #7b8b76;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.feature img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.eco img { transform: rotate(-22deg); }
+.parabens img { transform: rotate(22deg); }
+.loved img { width: 260px; height: 260px; transform: none; border-radius: 20px; box-shadow: none; }
+.loved p { margin-top: 10px; font-weight: 600; background-color: transparent; }
+
+/* ----------------------------
+   PRODUCT ROW
+----------------------------- */
+.products {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 50px auto;
+  flex-wrap: wrap;
+}
+
+.products img {
+  width: 140px;
+  height: 140px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.products img:hover {
+  transform: scale(1.05);
+}
+
+/* ----------------------------
+   FOOTER
+----------------------------- */
+footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icons img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+}
+
+/* ----------------------------
+   RESPONSIVE
+----------------------------- */
+@media (max-width: 900px) {
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .eco, .parabens {
+    transform: none;
+  }
+
+  .loved img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .products img {
+    width: 120px;
+    height: 120px;
+  }
+}
